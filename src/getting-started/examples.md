@@ -79,14 +79,16 @@ const payerWallet = Keypair.fromSecretKey(bs58.decode("4wBqpZM9...your-private-k
 
 const amm = new Amm(connection, payerWallet)
 
-// First create makers
-await amm.makers(mint, 5000, {jitoTipLamports: 10001})
-
-// Then generate volume
+// Configuration for volume
 const minSolPerSwap = 0.005
 const maxSolPerSwap = 0.006
 const mCapFactor = 0
-const speedFactor = 1 //once every 10 seconds
-await amm.volume(mint, minSolPerSwap, maxSolPerSwap, mCapFactor, speedFactor, {jitoTipLamports: 10001})
+const speedFactor = 1 // once every 10 seconds
+
+// Create makers and generate volume in parallel
+await Promise.all([
+    amm.makers(mint, 5000, { jitoTipLamports: 10001 }),
+    amm.volume(mint, minSolPerSwap, maxSolPerSwap, mCapFactor, speedFactor, { jitoTipLamports: 10001 })
+])
 ```
 
