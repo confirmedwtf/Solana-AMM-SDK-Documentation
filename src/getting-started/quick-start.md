@@ -95,7 +95,7 @@ This guide will help you get started with the Solana AMM SDK.
 
 - Always test with small amounts first
 - Ensure you have enough SOL in your wallet (at least 2 SOL recommended)
-- Higher `jitoTipLamports` values (100001, 300001) increase transaction priority
+- Higher `jitoTipLamports` values (10001, 30001) increase transaction priority
 - Never share or commit your private keys
 - Monitor your RPC usage to stay within provider limits
 
