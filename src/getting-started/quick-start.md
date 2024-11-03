@@ -22,17 +22,32 @@ This guide will help you get started with the Solana AMM SDK.
     - Verify installation by running: `git --version`
 
 ## Setup
+1. **Choose your installation method:**
 
-1. **Clone the repository:**
+    Option A - Install via npm (Recommended):
+    ```bash
+    # Create a new directory and initialize
+    mkdir my-amm-project
+    cd my-amm-project
+    npm init -y
+
+    # Install the SDK
+    npm install @confirmedwtf/solana-amm-sdk
+    ```
+
+    Option B - Clone the repository:
     ```bash
     git clone https://github.com/confirmedwtf/solana-amm-sdk
     cd solana-amm-sdk
-    ```
-
-2. **Install dependencies:**
-    ```bash
     npm install
     ```
+
+2. **Create test file:**
+    - If you installed via npm, create a new `test.mjs` file
+    - If you cloned the repository, the test file is already included
+    
+    You can copy our example test file from:
+    https://github.com/confirmedwtf/solana-amm-sdk/blob/main/test.mjs
 
 3. **Get a Solana RPC URL:**
     - Sign up at one of these providers:
@@ -89,13 +104,12 @@ This guide will help you get started with the Solana AMM SDK.
         - For a swap every 10 minutes, set `speedFactor` to approximately 0.017
     - `minSolPerSwap` and `maxSolPerSwap`: Start small (0.005-0.006) and adjust based on your needs
 - **Jito Tip**: Set to 10001 to prioritize your transaction
-- **Private Key**: Use your Phantom/Solana wallet private key or use an array format
+- **Private Key**: Support for both base 58 string format and byte array format
 
 ## Important Notes
 
-- Always test with small amounts first
-- Ensure you have enough SOL in your wallet (at least 2 SOL recommended)
-- Higher `jitoTipLamports` values (10001, 30001) increase transaction priority
+- Ensure you have enough SOL in your wallet (at least 0.03 SOL recommended)
+- If transactions are not landing, try increasing the jito tip (defaults to 10000 lamports if not specified)
 - Never share or commit your private keys
 - Monitor your RPC usage to stay within provider limits
 

@@ -6,7 +6,7 @@ Here are some examples of how to use the Solana AMM SDK. Ready to copy and paste
 
 ```javascript
 import { Connection, Keypair, PublicKey } from "@solana/web3.js"
-import Amm from "./src/Amm.js"
+import Amm from "@confirmedwtf/solana-amm-sdk"
 import bs58 from "bs58"
 
 // Replace with your RPC URL from QuickNode/Shyft/etc
@@ -32,7 +32,7 @@ await amm.makers(mint, 5000, {jitoTipLamports: 10001})
 
 ```javascript
 import { Connection, Keypair, PublicKey } from "@solana/web3.js"
-import Amm from "./src/Amm.js"
+import Amm from "@confirmedwtf/solana-amm-sdk"
 import bs58 from "bs58"
 
 // Replace with your RPC URL from QuickNode/Shyft/etc
@@ -61,7 +61,7 @@ await amm.volume(mint, minSolPerSwap, maxSolPerSwap, mCapFactor, speedFactor, {j
 
 ```javascript
 import { Connection, Keypair, PublicKey } from "@solana/web3.js"
-import Amm from "./src/Amm.js"
+import Amm from "@confirmedwtf/solana-amm-sdk"
 import bs58 from "bs58"
 
 // Replace with your RPC URL from QuickNode/Shyft/etc
