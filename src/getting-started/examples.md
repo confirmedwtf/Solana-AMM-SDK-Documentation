@@ -6,11 +6,11 @@ Here are some examples of how to use the Solana AMM SDK. Ready to copy and paste
 
 ```javascript
 import { Connection, Keypair, PublicKey } from "@solana/web3.js"
-import Amm from "@confirmedwtf/solana-amm-sdk"
-import bs58 from "bs58"
+import { Amm } from "@confirmedwtf/solana-amm-sdk"
 
 // Replace with your RPC URL from QuickNode/Shyft/etc
 const connection = new Connection("https://your-endpoint.network.quiknode.pro/abc123...")
+// If you need a RPC URL, you can contact us on https://discord.gg/confirmedwtf for a free one
 
 // Replace with your token's mint address
 const mint = new PublicKey("Ab9NePvx5PxqzqsKQmNrKz5264qJXH5xbL3NL8E6tYF1")
@@ -32,11 +32,11 @@ await amm.makers(mint, 5000, {jitoTipLamports: 10001})
 
 ```javascript
 import { Connection, Keypair, PublicKey } from "@solana/web3.js"
-import Amm from "@confirmedwtf/solana-amm-sdk"
-import bs58 from "bs58"
+import { Amm } from "@confirmedwtf/solana-amm-sdk"
 
 // Replace with your RPC URL from QuickNode/Shyft/etc
 const connection = new Connection("https://your-endpoint.network.quiknode.pro/abc123...")
+// If you need a RPC URL, you can contact us on https://discord.gg/confirmedwtf for a free one
 
 // Replace with your token's mint address
 const mint = new PublicKey("Ab9NePvx5PxqzqsKQmNrKz5264qJXH5xbL3NL8E6tYF1")
@@ -61,11 +61,11 @@ await amm.volume(mint, minSolPerSwap, maxSolPerSwap, mCapFactor, speedFactor, {j
 
 ```javascript
 import { Connection, Keypair, PublicKey } from "@solana/web3.js"
-import Amm from "@confirmedwtf/solana-amm-sdk"
-import bs58 from "bs58"
+import { Amm } from "@confirmedwtf/solana-amm-sdk"
 
 // Replace with your RPC URL from QuickNode/Shyft/etc
 const connection = new Connection("https://your-endpoint.network.quiknode.pro/abc123...")
+// If you need a RPC URL, you can contact us on https://discord.gg/confirmedwtf for a free one
 
 // Replace with your token's mint address
 const mint = new PublicKey("Ab9NePvx5PxqzqsKQmNrKz5264qJXH5xbL3NL8E6tYF1")
