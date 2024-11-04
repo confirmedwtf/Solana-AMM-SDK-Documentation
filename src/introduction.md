@@ -4,6 +4,8 @@ TL;DR: - [Quick Start](./getting-started/quick-start.md)
 
 A professional Automated Market Maker (AMM) SDK for Solana, leveraging Jito's infrastructure for optimal performance and efficiency. This SDK simplifies complex volume generation and maker creation processes into an easy-to-use interface.
 
+For support, join our [Discord](https://discord.gg/confirmedwtf).
+
 ## Why Use This SDK?
 
 Traditional AMM interaction code on Solana can be complex and difficult to understand. Our SDK addresses this by providing:
