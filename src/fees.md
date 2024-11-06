@@ -14,7 +14,7 @@ Example costs for different maker quantities:
 - 1,000,000 makers: ~15 SOL
 
 ### Volume Fees
-- **Volume Fee**: 0.05% of total volume generated
+- **Volume Fee**: 0.05% of total volume generated + 12,500 lamports per tx. 
 
 Example costs for different volume amounts:
 - 10,000 SOL volume: 5 USD fee
